@@ -1,6 +1,6 @@
 # Die Lautstärke der Weihnachtsmusik testen
 ## ~avatar avatar @unplugged
-[Anzeige](https://github.com/r00b1nh00d/weihnachtsmusiklautstaerke/blob/master/Laust%C3%A4rkeAnzeigen.gif?raw=true) <br>
+![Anzeige](https://github.com/r00b1nh00d/weihnachtsmusiklautstaerke/blob/master/Laust%C3%A4rkeAnzeigen.gif?raw=true) <br>
 Wie laut ist deine Weihnachtsmusik? <br>
 Du kannst mit dem Calliope die Lautstärke messen und sie dir am Computer oder dem Bildschirm des Calliope anzeigen lassen.
 
