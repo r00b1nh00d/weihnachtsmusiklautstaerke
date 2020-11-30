@@ -5,7 +5,7 @@ Wie laut ist deine Weihnachtsmusik? <br>
 Du kannst mit dem Calliope die Lautstärke messen und sie dir am Computer oder dem Bildschirm des Calliope anzeigen lassen.
 
 ## Schritt 1
-Ist der Calliope an deine Computer via USB angeschlossen kannst du dir die ``||inputs:Lautstärke||`` mit dem Block ``||serial: seriell Zeile ausgeben||`` am Computer anzeigen lassen. (diesen Block findest du unten im Fortgeschrittenen Bereich). 
+Ist der Calliope an deine Computer via USB angeschlossen kannst du dir die ``||input:Lautstärke||`` mit dem Block ``||serial: seriell Zeile ausgeben||`` am Computer anzeigen lassen. (diesen Block findest du unten im Fortgeschrittenen Bereich). 
 
 ```blocks
 basic.forever(function () {
@@ -22,7 +22,7 @@ Um dir die Lautstärke am Computer ausgeben zu lassen brauchst du ein Programm w
 
 
 ## Schritt 2
-Wie schon gesagt kannst du dir die ``||inputs:Lautstärke||`` auch direkt am Calliope anzeigen lassen. Dafür gibt es im Bereich ``||led:Led||`` den block ``||led:zeichne Säulendiagramm||``.    
+Wie schon gesagt kannst du dir die ``||input:Lautstärke||`` auch direkt am Calliope anzeigen lassen. Dafür gibt es im Bereich ``||leds:Led||`` den block ``||leds:zeichne Säulendiagramm||``.    
 
 
 basic.forever(function () {
