@@ -1,35 +1,34 @@
 # Die Lautstärke der Weihnachtsmusik testen
 ## ~avatar avatar @unplugged
-gedulde dich noch ein wenig bis es soweit ist :-)
+[Anzeige](https://github.com/r00b1nh00d/weihnachtsmusiklautstaerke/blob/master/Laust%C3%A4rkeAnzeigen.gif?raw=true) <br>
+Wie laut ist deine Weihnachtsmusik? <br>
+Du kannst mit dem Calliope die Lautstärke messen und sie dir am Computer oder dem Bildschirm des Calliope anzeigen lassen.
+
+## Schritt 1
+Ist der Calliope an deine Computer via USB angeschlossen kannst du dir die ``||inputs:Lautstärke||`` mit dem Block ``||serial: seriell Zeile ausgeben||`` am Computer anzeigen lassen. (diesen Block findest du unten im Fortgeschrittenen Bereich). 
+
+```blocks
+basic.forever(function () {
+    serial.writeLine("" + input.soundLevel())
+    basic.pause(10)
+})
+```
+
+## ~@unplugged 
+Um dir die Lautstärke am Computer ausgeben zu lassen brauchst du ein Programm wie [putty](https://www.putty.org/). <br>
+![puttyNutzen](https://github.com/r00b1nh00d/mandarinenklavier/blob/master/Puttynutzen.png?raw=true) <br>
+Öffne das Programm Putty. Dort musst du zuerst "Serial" auswählen. Anschließend musst du im Gerätemanager schauen an welchem COM-Anschluss dein Calliope angeschlossen ist. Bei mir war es der Port COM4. Den Gerätemanager erreichst du z.B. mit rechtsklick auf das Windows-Symbol (unten links im Bild). Als übertragungsgeschwindigkeit musst du für den Calliope noch die 115220 einstellen. Nachdem du bei putty auf Open geklickt hast öffnet sich ein Fenster mit schwarzem Hintergrund. Dort sollten dir jetzt nach einem Drücken der Taste "A" die Werte angezeigt werden.
 
 
-> Diese Seite bei [https://r00b1nh00d.github.io/weihnachtsmusiklautstaerke/](https://r00b1nh00d.github.io/weihnachtsmusiklautstaerke/) öffnen
 
-## Als Erweiterung verwenden
+## Schritt 2
+Wie schon gesagt kannst du dir die ``||inputs:Lautstärke||`` auch direkt am Calliope anzeigen lassen. Dafür gibt es im Bereich ``||led:Led||`` den block ``||led:zeichne Säulendiagramm||``.    
 
-Dieses Repository kann als **Erweiterung** in MakeCode hinzugefügt werden.
 
-* öffne [https://makecode.calliope.cc/](https://makecode.calliope.cc/)
-* klicke auf **Neues Projekt**
-* klicke auf **Erweiterungen** unter dem Zahnrad-Menü
-* nach **https://github.com/r00b1nh00d/weihnachtsmusiklautstaerke** suchen und importieren
-
-## Dieses Projekt bearbeiten ![Build Status Abzeichen](https://github.com/r00b1nh00d/weihnachtsmusiklautstaerke/workflows/MakeCode/badge.svg)
-
-Um dieses Repository in MakeCode zu bearbeiten.
-
-* öffne [https://makecode.calliope.cc/](https://makecode.calliope.cc/)
-* klicke auf **Importieren** und dann auf **Importiere URL**
-* füge **https://github.com/r00b1nh00d/weihnachtsmusiklautstaerke** ein und klicke auf Importieren
-
-## Blockvorschau
-
-Dieses Bild zeigt den Blockcode vom letzten Commit im Master an.
-Die Aktualisierung dieses Bildes kann einige Minuten dauern.
-
-![Eine gerenderte Ansicht der Blöcke](https://github.com/r00b1nh00d/weihnachtsmusiklautstaerke/raw/master/.github/makecode/blocks.png)
-
-#### Metadaten (verwendet für Suche, Rendering)
-
-* for PXT/calliopemini
-<script src="https://makecode.com/gh-pages-embed.js"></script><script>makeCodeRender("{{ site.makecode.home_url }}", "{{ site.github.owner_name }}/{{ site.github.repository_name }}");</script>
+basic.forever(function () {
+     led.plotBarGraph(
+   input.soundLevel() * 10,
+    255
+    )
+    basic.pause(10)
+})
