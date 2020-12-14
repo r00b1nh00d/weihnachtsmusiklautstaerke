@@ -23,7 +23,7 @@ Um dir die Lautstärke am Computer ausgeben zu lassen brauchst, du ein Programm 
 
 ## Schritt 2
 Wie schon gesagt, kannst du dir die ``||input:Lautstärke||`` auch direkt am Calliope anzeigen lassen. Dafür gibt es im Bereich ``||leds:LED||`` den block ``||leds:zeichne Säulendiagramm||``.    
-
+```blocks
 
 basic.forever(function () {
      led.plotBarGraph(
@@ -32,3 +32,4 @@ basic.forever(function () {
     )
     basic.pause(10)
 })
+```
